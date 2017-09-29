@@ -1,0 +1,14 @@
+{
+    "manifest_version": 2,
+    "name": "Test Extension",
+    "version": "0.0",
+    "content_scripts": [{
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }],
+    "background": {
+        "scripts": ["script.js"]
+  },
+    "permissions": ["activeTab", "tabs", "contextMenus", "storage"],
+    "web_accessible_resources": ["injected.js"]
+  }
