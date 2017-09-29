@@ -9,7 +9,8 @@ console.log("loaded popup .js");
 // });
 
 
-chrome.storage.sync.get('value', function (items) {
-    console.log(items.value);
-    document.write(items.value);
+chrome.storage.sync.get('assistedLearning', function (items) {
+    console.log(items.assistedLearning);
+    document.write(items.assistedLearning);
+    chrome.storage.sync.remove("assistedLearning");
 });

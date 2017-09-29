@@ -1,14 +1,33 @@
 {
-    "manifest_version": 2,
-    "name": "Test Extension",
-    "version": "0.0",
-    "content_scripts": [{
-      "matches": ["<all_urls>"],
-      "js": ["content.js"]
-    }],
-    "background": {
-        "scripts": ["script.js"]
+  "manifest_version": 2,
+  "name": "Test Extension",
+  "version": "0.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
   },
-    "permissions": ["activeTab", "tabs", "contextMenus", "storage"],
-    "web_accessible_resources": ["injected.js"]
-  }
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "contextMenus",
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+  ],
+  "web_accessible_resources": [
+    "injected.js",
+    "tcode-hax.js"
+  ]
+}
